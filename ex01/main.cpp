@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 13:55:42 by mjong             #+#    #+#             */
-/*   Updated: 2025/03/12 13:59:33 by mjong            ###   ########.fr       */
+/*   Created: 2025/03/12 14:29:04 by mjong             #+#    #+#             */
+/*   Updated: 2025/03/12 14:54:55 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 int	main(void)
 {
-	Zombie	*zombie;
+	Zombie	*horde;
 
-	randomChump("Alex");
-	zombie = newZombie("Bob");
-	zombie->announce();
-	delete zombie;
+	horde = zombieHorde(100, "Army");
+	for (size_t i = 0; i < 100; i++)
+    {
+        horde[i].announce(i + 1);
+    }
+	delete[] horde;
 	return (0);
 }

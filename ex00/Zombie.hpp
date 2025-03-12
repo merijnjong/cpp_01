@@ -6,7 +6,7 @@
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 13:55:52 by mjong             #+#    #+#             */
-/*   Updated: 2025/02/12 14:12:54 by mjong            ###   ########.fr       */
+/*   Updated: 2025/03/12 14:44:26 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,16 @@
 
 class Zombie {
 	public:
-		void announce() {
-			std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;			
-		}
-		void setName() {
-			this->name = name;
-		}
-		std::string getName() {
-			return (name);
-		}
+		Zombie(std::string name);
+		void	announce(void);
+		Zombie(void);
+		~Zombie(void);
 
 	private:
 		std::string name;
 };
+
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif

@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 13:55:42 by mjong             #+#    #+#             */
-/*   Updated: 2025/03/12 13:59:33 by mjong            ###   ########.fr       */
+/*   Created: 2025/03/12 14:29:24 by mjong             #+#    #+#             */
+/*   Updated: 2025/03/12 14:57:17 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int	main(void)
+Zombie::Zombie(std::string name)
 {
-	Zombie	*zombie;
+	this->name = name;
+	std::cout << name << " has been made" << std::endl;
+}
 
-	randomChump("Alex");
-	zombie = newZombie("Bob");
-	zombie->announce();
-	delete zombie;
-	return (0);
+void	Zombie::announce(int N)
+{
+	std::cout << "Number: " << N << " " << name << ": BraiiiiiiinnnzzzZ..." << std::endl;			
+}
+
+void	Zombie::setName(std::string name)
+{
+	this->name = name;
+}
+
+Zombie::Zombie(void)
+{	
+}
+
+Zombie::~Zombie(void)
+{
+	std::cout << name << " has been destroyed" << std::endl;
 }
