@@ -6,7 +6,7 @@
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:11:42 by mjong             #+#    #+#             */
-/*   Updated: 2025/03/26 14:25:29 by mjong            ###   ########.fr       */
+/*   Updated: 2025/05/28 13:42:13 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <iomanip>
 #include <iostream>
 #include <limits>
+#include <cstring>
+#include <fstream>
 
 typedef struct input
 {
