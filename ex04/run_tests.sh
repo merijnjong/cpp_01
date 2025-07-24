@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-PROGRAM=./program
+PROGRAM=./replace
 
 if [ ! -x "$PROGRAM" ]; then
 	echo "Error: $PROGRAM not found or not executable."
@@ -62,36 +62,41 @@ run_test() {
 
 # Run tests
 run_test 1 test1.txt hello hi test1_expected.txt
+sleep 1
 run_test 2 test2.txt hello hi test2_expected.txt
+sleep 1
 run_test 3 test3.txt hello hi test3_expected.txt
+sleep 1
 run_test 4 test4.txt unchanged unchanged test4_expected.txt
-run_test 7 test7.txt line sentence test7_expected.txt
-run_test 8 test8.txt aa b test8_expected.txt
-
+sleep 1
 # Test 5: s1 is empty (should error out)
-echo -n "Running Test 5 (empty s1)... "
+echo -n "Test 5 (empty s1)... "
 if $PROGRAM test1.txt "" hi 2>/dev/null; then
 	echo "❌ FAILED (should have exited with error)"
 else
 	echo "✅ Passed"
 fi
-
+sleep 1
 # Test 6: File doesn't exist
-echo -n "Running Test 6 (nonexistent file)... "
+echo -n "Test 6 (nonexistent file)... "
 if $PROGRAM nonexistent.txt hello hi 2>/dev/null; then
 	echo "❌ FAILED (should have exited with error)"
 else
 	echo "✅ Passed"
 fi
-
+sleep 1
+run_test 7 test7.txt line sentence test7_expected.txt
+sleep 1
+run_test 8 test8.txt aa b test8_expected.txt
+sleep 1
 # Test 9: Missing arguments
-echo -n "Running Test 9 (missing args)... "
+echo -n "Test 9 (missing args)... "
 if $PROGRAM test1.txt hello 2>/dev/null; then
 	echo "❌ FAILED (should have exited with error)"
 else
 	echo "✅ Passed"
 fi
-
+sleep 1
 echo "Cleaning up test files..."
 sleep 10
 rm -f test1.txt test1_expected.txt test1.txt.replace \

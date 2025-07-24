@@ -6,7 +6,7 @@
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 15:19:18 by mjong             #+#    #+#             */
-/*   Updated: 2025/03/20 15:20:37 by mjong            ###   ########.fr       */
+/*   Updated: 2025/07/24 17:15:52 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 class Weapon
 {
 	public:
-		void		setType(std::string weapon);
-		std::string	getType();
+		void				setType(std::string weapon);
+		const std::string	getType();
 		Weapon(std::string weapon);
 		Weapon();
 		~Weapon();

@@ -6,19 +6,19 @@
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:11:42 by mjong             #+#    #+#             */
-/*   Updated: 2025/05/28 13:42:13 by mjong            ###   ########.fr       */
+/*   Updated: 2025/05/28 14:43:15 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <cctype>
-#include <string>
+#include <cstring>
+#include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <limits>
-#include <cstring>
-#include <fstream>
+#include <string>
 
 typedef struct input
 {

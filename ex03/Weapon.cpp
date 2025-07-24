@@ -6,7 +6,7 @@
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 15:19:16 by mjong             #+#    #+#             */
-/*   Updated: 2025/03/20 15:20:34 by mjong            ###   ########.fr       */
+/*   Updated: 2025/07/24 17:15:57 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	Weapon::setType(std::string weapon)
 	this->weapon = weapon;
 }
 
-std::string	Weapon::getType()
+const std::string	Weapon::getType()
 {
 	return (weapon);
 }

@@ -1,6 +1,6 @@
-NAME		:= program
-CXX			:= g++
-CXXFLAGS	:= -fsanitize=address -g -Wextra -Wall -Werror
+NAME		:= replace
+CXX			:= c++
+CXXFLAGS	:= -g -Wextra -Wall -Werror
 
 SRCS		:= main.cpp program.cpp
 OBJS		:= $(SRCS:.cpp=.o)

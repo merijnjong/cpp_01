@@ -6,7 +6,7 @@
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 14:30:44 by mjong             #+#    #+#             */
-/*   Updated: 2025/03/12 14:53:39 by mjong            ###   ########.fr       */
+/*   Updated: 2025/03/20 15:22:09 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 
 class Zombie {
 	public:
-		Zombie(std::string name);
 		void	announce(int N);
 		void	setName(std::string name);
-		Zombie(void);
-		~Zombie(void);
+		Zombie(std::string name);
+		Zombie();
+		~Zombie();
 
 	private:
 		std::string name;

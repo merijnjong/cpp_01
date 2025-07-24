@@ -6,7 +6,7 @@
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:11:39 by mjong             #+#    #+#             */
-/*   Updated: 2025/05/28 14:12:53 by mjong            ###   ########.fr       */
+/*   Updated: 2025/05/28 14:43:52 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void program(char* argv[], input &input)
 {
 	if (!argv[1] || !argv[2] || !argv[3])
 	{
-		std::cerr << "Program must be run like this:\n./program <filename> <string1> <string2>" << std::endl;
+		std::cerr << "Program must be run like this:\n./replace <filename> <string1> <string2>" << std::endl;
 		std::exit(EXIT_FAILURE);
 	}
 

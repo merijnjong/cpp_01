@@ -6,7 +6,7 @@
 /*   By: mjong <mjong@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:11:36 by mjong             #+#    #+#             */
-/*   Updated: 2025/05/28 13:45:58 by mjong            ###   ########.fr       */
+/*   Updated: 2025/05/28 14:52:03 by mjong            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	main(int argc, char *argv[])
 	}
 	else
 	{
-		std::cout << "Program must be run like this:\n./program <filename> <string1> <string2>" << std::endl;
+		std::cerr << "Program must be run like this:\n./replace <filename> <string1> <string2>" << std::endl;
 		return (1);
 	}
 	return (0);
